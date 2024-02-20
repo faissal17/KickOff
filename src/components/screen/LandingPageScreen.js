@@ -9,7 +9,7 @@ const LandingPageScreen = () => {
   const navigation = useNavigation();
 
   const onGetStartedPress = () => {
-    navigation.navigate('HomeScreen');
+    navigation.navigate('Matches');
   };
   return (
     <React.Fragment>

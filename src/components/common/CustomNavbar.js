@@ -15,7 +15,7 @@ const CustomNavbar = () => {
     <Tab.Navigator
       initialRouteName="Match"
       screenOptions={({ route }) => ({
-        headerShown: true,
+        headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
           const { name } = route;
