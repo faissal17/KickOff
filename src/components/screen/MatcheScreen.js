@@ -4,9 +4,11 @@ import { MatcheScreenStyle } from '../../styles/globalStyle';
 
 const MatcheScreen = () => {
   return (
-    <View>
-      <Text>hey</Text>
-    </View>
+    <React.Fragment>
+      <View>
+        <Text>hey</Text>
+      </View>
+    </React.Fragment>
   );
 };
 

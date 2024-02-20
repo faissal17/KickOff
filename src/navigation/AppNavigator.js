@@ -10,7 +10,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="HomeScreen"
+        initialRouteName="LandingPageScreen"
       >
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="LandingPageScreen" component={LandingPageScreen} />
