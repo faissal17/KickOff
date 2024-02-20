@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <ImageBackground source={Logo} style={HomeScreenStyle.background}>
       <View style={HomeScreenStyle.root}>
-        <Text>HomeScreen</Text> 
+        <Text style={HomeScreenStyle.text}>HomeScreen</Text>
       </View>
     </ImageBackground>
   );
