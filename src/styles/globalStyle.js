@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const HomeScreenStyle = StyleSheet.create({
+export const LandingPageScreenStyle = StyleSheet.create({
   root: {
     flex: 1,
     justifyContent: 'center',
@@ -18,5 +18,10 @@ export const HomeScreenStyle = StyleSheet.create({
 export const MatcheScreenStyle = StyleSheet.create({
   navbar: {
     flex: 1,
+  },
+  root: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

@@ -1,11 +1,11 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import CustomNavbar from '../common/CustomNavbar';
+import { MatcheScreenStyle } from '../../styles/globalStyle';
 
 const MatcheScreen = () => {
   return (
     <View>
-      <CustomNavbar />
+      <Text>hey</Text>
     </View>
   );
 };
