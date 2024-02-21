@@ -2,20 +2,29 @@ import { StyleSheet } from 'react-native';
 
 export const LandingPageScreenStyle = StyleSheet.create({
   root: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
+  },
+  logo: {
+    justifyContent: 'center',
+    width: 400,
   },
   background: {
     flex: 1,
     resizeMode: 'cover',
   },
-
   text: {
     fontSize: 30,
     fontWeight: 'bold',
     color: 'white',
     textTransform: 'uppercase',
+    alignItems: 'center',
+  },
+  secText: {
+    fontSize: 15,
+    color: 'white',
+    alignItems: 'center',
   },
 });
 
@@ -28,6 +37,7 @@ export const CustomButtonStyle = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 20,
     fontWeight: 'bold',
+    marginTop: 20,
   },
   container_primary: { backgroundColor: '#3B71F3', color: 'white' },
   container_sec: { fontWeight: 'bold', color: '#000000' },

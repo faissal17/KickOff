@@ -8,9 +8,9 @@ const AppNavigator = () => {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LandingPageScreen">
+      <Stack.Navigator initialRouteName="KickOff">
         <Stack.Screen name="Matches" component={HomeScreen} />
-        <Stack.Screen name="Get Started" component={LandingPageScreen} />
+        <Stack.Screen name="KickOff" component={LandingPageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

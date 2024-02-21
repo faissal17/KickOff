@@ -11,7 +11,6 @@ const MatcheScreen = () => {
     getAllMatches()
       .then((response) => {
         setMatches(response.data);
-        console.log('Matches data:', response.data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -27,7 +26,6 @@ const MatcheScreen = () => {
               <Text>{match.name}</Text>
               <Text>{match.starting_at}</Text>
               <Text>{match.result_info}</Text>
-              {/* Add more details as needed */}
             </View>
           ))}
         </View>
