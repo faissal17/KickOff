@@ -45,8 +45,8 @@ export const CustomButtonStyle = StyleSheet.create({
 });
 
 export const MatcheScreenStyle = StyleSheet.create({
-  photo:{
-    justifyContent:"flex-end"
+  photo: {
+    justifyContent: 'flex-end',
   },
   container: {
     padding: 10,
@@ -103,6 +103,45 @@ export const MatcheScreenStyle = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
+});
+
+export const CustomCarouselStyle = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    maxHeight: 200,
+    marginBottom: 20,
+    borderRadius: 20,
+  },
+  slide: {
+    flex: 1,
+    alignItems: 'flex-end',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    justifyContent: 'flex-end',
+  },
+  textContainer: {
+    position: 'absolute',
+    top: 40,
+    left: 15,
+    maxWidth: 200,
+  },
+  text: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+    textAlign: 'left',
+  },
+  image: {
+    resizeMode: 'cover',
+    width: 200,
+    height: 300,
+  },
+});
+
+export const MatchDetailScreenStyle = StyleSheet.create({
   background: {
     flex: 1,
     resizeMode: 'cover',
