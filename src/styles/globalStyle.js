@@ -45,8 +45,10 @@ export const CustomButtonStyle = StyleSheet.create({
 });
 
 export const MatcheScreenStyle = StyleSheet.create({
+  photo:{
+    justifyContent:"flex-end"
+  },
   container: {
-    flex: 1,
     padding: 10,
     marginTop: 4,
     marginBottom: 4,
