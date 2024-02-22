@@ -5,6 +5,8 @@ import {
   MatchDetailScreenStyle,
   MatcheScreenStyle,
 } from '../../styles/globalStyle';
+import CustomCarousel from '../common/CustomCarousel';
+import messi from '../../assets/images/10.png';
 
 const MatchDetailScreen = ({ route }) => {
   const { match } = route.params;
@@ -13,6 +15,12 @@ const MatchDetailScreen = ({ route }) => {
     <ImageBackground source={Details} style={MatchDetailScreenStyle.background}>
       <View>
         <ScrollView style={MatcheScreenStyle.container}>
+          <View style={MatcheScreenStyle.photo}>
+            <CustomCarousel
+              image={messi}
+              text=" the beauty of football lies in its universal appeal, simplicity, and ability to unite people across cultures. On the pitch, it showcases skill, teamwork, and strategy, creating a captivating story with each match."
+            />
+          </View>
           <View style={MatcheScreenStyle.matchItem}>
             <Text style={MatcheScreenStyle.vs}>Vs</Text>
             <View style={MatcheScreenStyle.matchTextContainer}>
@@ -30,6 +38,9 @@ const MatchDetailScreen = ({ route }) => {
                 ))}
               </View>
             </View>
+          </View>
+          <View style={MatchDetailScreenStyle.matchTitle}>
+            <Text style={MatchDetailScreenStyle.title}>{match.result_info}</Text>
           </View>
         </ScrollView>
       </View>

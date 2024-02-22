@@ -4,12 +4,13 @@ import {
   ImageBackground,
   ScrollView,
   Image,
-  Linking,
   TouchableOpacity,
 } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { MatcheScreenStyle } from '../../styles/globalStyle';
 import Logo from '../../assets/images/Logo.jpeg';
+import champ from '../../assets/images/MessiChampoin.png';
+
 import { getAllMatches, getAllLeagues } from '../../service/Api';
 import CustomCarousel from '../common/CustomCarousel';
 import { useNavigation } from '@react-navigation/native';
@@ -46,7 +47,12 @@ const MatcheScreen = () => {
       <ImageBackground source={Logo} style={MatcheScreenStyle.background}>
         <ScrollView style={MatcheScreenStyle.container}>
           <View style={MatcheScreenStyle.photo}>
-            <CustomCarousel />
+            <CustomCarousel
+              image={champ}
+              text="The UEFA Champions League is an annual club football competition
+            organized by the Union of European Football Associations (UEFA) and
+            contested by top-division European clubs."
+            />
           </View>
           {matches.map((match, index) => (
             <TouchableOpacity onPress={() => onDetailsSPress({ match })}>

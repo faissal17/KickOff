@@ -146,4 +146,12 @@ export const MatchDetailScreenStyle = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
   },
+  matchTitle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    color: 'white',
+    fontSize: 30,
+  },
 });
