@@ -1,34 +1,54 @@
-import { View, Text, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, ScrollView, Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { MatcheScreenStyle } from '../../styles/globalStyle';
-import Logo from '../../assets/images/Logo.png';
-import { getAllMatches } from '../../service/Api';
+import Logo from '../../assets/images/Logo.jpeg';
+import { getAllMatches, getAllLeagues } from '../../service/Api';
 
 const MatcheScreen = () => {
   const [matches, setMatches] = useState([]);
+  const [leugues, setLeagues] = useState([]);
 
   useEffect(() => {
-    getAllMatches()
-      .then((response) => {
-        setMatches(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
+    const fetchData = async () => {
+      try {
+        const [matchesResponse, leaguesResponse] = await Promise.all([
+          getAllMatches(),
+          getAllLeagues(),
+        ]);
 
+        setMatches(matchesResponse.data);
+        setLeagues(leaguesResponse.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <React.Fragment>
       <ImageBackground source={Logo} style={MatcheScreenStyle.background}>
-        <View style={MatcheScreenStyle.root}>
-          {matches.map((match) => (
-            <View key={match.id}>
-              <Text>{match.name}</Text>
-              <Text>{match.starting_at}</Text>
-              <Text>{match.result_info}</Text>
+        <ScrollView style={MatcheScreenStyle.container}>
+          {matches.map((match, index) => (
+            <View key={index} style={MatcheScreenStyle.matchItem}>
+              <Text style={MatcheScreenStyle.vs}>Vs</Text>
+              <View style={MatcheScreenStyle.matchTextContainer}>
+                <View style={MatcheScreenStyle.images}>
+                  {match.participants.map((part) => (
+                    <View style={MatcheScreenStyle.cont}>
+                      <Image
+                        style={MatcheScreenStyle.img}
+                        source={{ uri: part.image_path }}
+                      />
+                      <Text style={MatcheScreenStyle.matchText1}>
+                        {part.name}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              </View>
             </View>
           ))}
-        </View>
+        </ScrollView>
       </ImageBackground>
     </React.Fragment>
   );

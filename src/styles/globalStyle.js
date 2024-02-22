@@ -45,10 +45,61 @@ export const CustomButtonStyle = StyleSheet.create({
 });
 
 export const MatcheScreenStyle = StyleSheet.create({
-  root: {
+  container: {
     flex: 1,
-    justifyContent: 'center',
+    padding: 10,
+    marginTop: 4,
+    marginBottom: 4,
+  },
+  cont: {
+    flex: 1,
+    flexDirection: 'column',
     alignItems: 'center',
+  },
+  img: {
+    width: 50,
+    height: 50,
+    resizeMode: 'cover',
+  },
+
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+
+  images: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  matchItem: {
+    display: 'relative',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    padding: 10,
+    marginBottom: 18,
+    borderRadius: 5,
+    flex: 1,
+    flexDirection: 'row',
+  },
+  matchTextContainer: {
+    flex: 1,
+    marginBottom: 5,
+    justifyContent: 'center',
+  },
+  matchText1: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginStart: 8,
+  },
+  vs: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   background: {
     flex: 1,

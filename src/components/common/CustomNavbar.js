@@ -8,7 +8,7 @@ import MatcheScreen from '../screen/MatcheScreen';
 const Tab = createBottomTabNavigator();
 
 const PlayerScreenName = 'PLayeres';
-const MatcheScreenName = 'Matches';
+const MatcheScreenName = 'Match';
 
 const CustomNavbar = () => {
   return (
