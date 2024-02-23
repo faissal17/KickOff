@@ -31,6 +31,7 @@ const MatcheScreen = () => {
 
         setMatches(matchesResponse.data);
         setLeagues(leaguesResponse.data);
+        //console.log(matchesResponse.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -55,19 +56,25 @@ const MatcheScreen = () => {
             />
           </View>
           {matches.map((match, index) => (
-            <TouchableOpacity onPress={() => onDetailsSPress({ match })}>
+            <TouchableOpacity
+              key={index}
+              onPress={() => onDetailsSPress({ match })}
+            >
               <View key={index} style={MatcheScreenStyle.matchItem}>
                 <Text style={MatcheScreenStyle.vs}>Vs</Text>
                 <View style={MatcheScreenStyle.matchTextContainer}>
                   <View style={MatcheScreenStyle.images}>
-                    {match.participants.map((match, index) => (
-                      <View key={index} style={MatcheScreenStyle.cont}>
+                    {match.participants.map((participant, participantIndex) => (
+                      <View
+                        key={participantIndex}
+                        style={MatcheScreenStyle.cont}
+                      >
                         <Image
                           style={MatcheScreenStyle.img}
-                          source={{ uri: match.image_path }}
+                          source={{ uri: participant.image_path }}
                         />
                         <Text style={MatcheScreenStyle.matchText1}>
-                          {match.name}
+                          {participant.name}
                         </Text>
                       </View>
                     ))}

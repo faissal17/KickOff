@@ -22,25 +22,33 @@ const MatchDetailScreen = ({ route }) => {
             />
           </View>
           <View style={MatcheScreenStyle.matchItem}>
+            <Image source={{ uri: match.image_path }} />
             <Text style={MatcheScreenStyle.vs}>Vs</Text>
             <View style={MatcheScreenStyle.matchTextContainer}>
               <View style={MatcheScreenStyle.images}>
-                {match.participants.map((match, index) => (
-                  <View key={index} style={MatcheScreenStyle.cont}>
+                {match.participants.map((participant, participantIndex) => (
+                  <View key={participantIndex} style={MatcheScreenStyle.cont}>
                     <Image
                       style={MatcheScreenStyle.img}
-                      source={{ uri: match.image_path }}
+                      source={{ uri: participant.image_path }}
                     />
                     <Text style={MatcheScreenStyle.matchText1}>
-                      {match.name}
+                      {participant.name}
                     </Text>
                   </View>
                 ))}
               </View>
+              <View style={MatchDetailScreenStyle.starting}>
+                <Text style={MatchDetailScreenStyle.start}>
+                  {match.starting_at}
+                </Text>
+              </View>
             </View>
           </View>
           <View style={MatchDetailScreenStyle.matchTitle}>
-            <Text style={MatchDetailScreenStyle.title}>{match.result_info}</Text>
+            <Text style={MatchDetailScreenStyle.title}>
+              {match.result_info}
+            </Text>
           </View>
         </ScrollView>
       </View>

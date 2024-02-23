@@ -154,4 +154,23 @@ export const MatchDetailScreenStyle = StyleSheet.create({
     color: 'white',
     fontSize: 30,
   },
+  starting: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  start: {
+    marginTop: 10,
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  league: {
+    position: 'absolute',
+    top: '20%',
+    left: '50%',
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
