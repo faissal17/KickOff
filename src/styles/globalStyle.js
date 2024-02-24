@@ -182,25 +182,31 @@ export const MatchDetailScreenStyle = StyleSheet.create({
 
 export const CustomSearchBarStyle = StyleSheet.create({
   root: {
-    marginTop: 10,
+    marginTop: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   input: {
+    color: 'white',
     paddingHorizontal: 20,
     paddingVertical: 10,
-    borderColor: '#ccc',
+    borderColor: 'white',
     borderWidth: 1,
     borderRadius: 8,
+    width: '80%',
   },
 });
 
 export const PlayerScreenStyle = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    paddingVertical: 16,
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
   },
   playerContainer: {
     alignItems: 'center',
     marginBottom: 16,
+    marginTop: 20,
   },
   playerImage: {
     width: 100,
@@ -209,11 +215,12 @@ export const PlayerScreenStyle = StyleSheet.create({
     marginBottom: 8,
   },
   playerName: {
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
   },
-  playerAge: {
+  commoName: {
     fontSize: 14,
-    color: 'gray',
+    color: 'white',
   },
 });

@@ -1,13 +1,9 @@
 import { SafeAreaView, Text, TextInput } from 'react-native';
 import React, { useState } from 'react';
 import { CustomSearchBarStyle } from '../../styles/globalStyle';
+import filter from 'lodash.filter';
 
 const CustomSearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  handelSearch = (query) => {
-    setSearchQuery(query);
-  };
   return (
     <SafeAreaView style={CustomSearchBarStyle.root}>
       <TextInput
