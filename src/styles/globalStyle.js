@@ -224,3 +224,5 @@ export const PlayerScreenStyle = StyleSheet.create({
     color: 'white',
   },
 });
+
+export const PlayerDetailScreenstyle = StyleSheet.create({});

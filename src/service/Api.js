@@ -14,7 +14,8 @@ const leugueApi = axios.create({
 });
 
 const playerApi = axios.create({
-  baseURL: 'https://api.sportmonks.com/v1/football/players',
+  baseURL:
+    'https://api.sportmonks.com/v1/football/players?include=nationality;position',
   timeout: 5000,
 });
 
