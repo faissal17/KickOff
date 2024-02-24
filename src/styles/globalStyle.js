@@ -103,6 +103,11 @@ export const MatcheScreenStyle = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+  heart: {
+    position: 'absolute',
+    top: '70%',
+    left: '50%',
+  },
   background: {
     flex: 1,
     resizeMode: 'cover',
@@ -172,5 +177,43 @@ export const MatchDetailScreenStyle = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+});
+
+export const CustomSearchBarStyle = StyleSheet.create({
+  root: {
+    marginTop: 10,
+  },
+  input: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 8,
+  },
+});
+
+export const PlayerScreenStyle = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    paddingVertical: 16,
+  },
+  playerContainer: {
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  playerImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 8,
+  },
+  playerName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  playerAge: {
+    fontSize: 14,
+    color: 'gray',
   },
 });

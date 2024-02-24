@@ -31,7 +31,6 @@ const MatcheScreen = () => {
 
         setMatches(matchesResponse.data);
         setLeagues(leaguesResponse.data);
-        //console.log(matchesResponse.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
