@@ -225,4 +225,70 @@ export const PlayerScreenStyle = StyleSheet.create({
   },
 });
 
-export const PlayerDetailScreenstyle = StyleSheet.create({});
+export const PlayerDetailScreenstyle = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+  container: {
+    flex: 1,
+    padding: 20,
+    marginTop: 30,
+    justifyContent: 'space-between',
+  },
+  playerInfoContainer: {
+    alignItems: 'center',
+  },
+  playerName: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  commonName: {
+    fontSize: 18,
+    color: 'white',
+  },
+  additionalInfo: {
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: '90%',
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 12,
+  },
+  detailsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  nationalityContainer: {
+    alignItems: 'center',
+    marginTop: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: '90%',
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  positionContainer: {
+    alignItems: 'center',
+  },
+  detailsLabel: {
+    fontSize: 16,
+    color: '#000000',
+    fontWeight: 'bold',
+  },
+  detailsValue: {
+    fontSize: 16,
+    color: '#000000',
+    fontWeight: 'bold',
+  },
+  flagImage: {
+    width: 30,
+    height: 20,
+    marginTop: 5,
+  },
+});
