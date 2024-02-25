@@ -37,6 +37,9 @@ const PlayerDetailScreen = ({ route }) => {
             <Text
               style={styles.additionalInfo}
             >{`Weight: ${player.weight} kg`}</Text>
+            <Text
+              style={styles.additionalInfo}
+            >{`position: ${player.position.name}`}</Text>
 
             <View style={styles.detailsContainer}>
               <View style={styles.nationalityContainer}>
@@ -66,6 +69,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    marginTop: 30,
     justifyContent: 'space-between',
   },
   playerInfoContainer: {
@@ -81,9 +85,14 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   additionalInfo: {
-    fontSize: 14,
-    color: 'white',
-    marginTop: 5,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: '90%',
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 12,
   },
   detailsContainer: {
     flexDirection: 'row',
@@ -91,18 +100,26 @@ const styles = StyleSheet.create({
   },
   nationalityContainer: {
     alignItems: 'center',
+    marginTop: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: '90%',
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   positionContainer: {
     alignItems: 'center',
   },
   detailsLabel: {
     fontSize: 16,
-    color: 'white',
+    color: '#000000',
     fontWeight: 'bold',
   },
   detailsValue: {
-    fontSize: 14,
-    color: 'white',
+    fontSize: 16,
+    color: '#000000',
+    fontWeight: 'bold',
   },
   flagImage: {
     width: 30,
