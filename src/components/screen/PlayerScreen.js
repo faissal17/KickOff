@@ -48,7 +48,7 @@ const PlayerScreen = () => {
               placeholder="Search Player"
               clearButtonMode="always"
               autoCapitalize="none"
-              onChange={(query) => setSearchQuery(query)}
+              onChangeText={(query) => setSearchQuery(query)}
               value={searchQuery}
             />
           </View>

@@ -17,7 +17,7 @@ const PlayerDetailScreen = ({ route }) => {
   const { player } = route.params;
 
   return (
-    <ImageBackground source={mucha} style={styles.background}>
+    <ImageBackground source={mucha} style={PlayerScreenStyle.background}>
       <ScrollView>
         <TouchableOpacity>
           <View style={PlayerScreenStyle.playerContainer}>
@@ -62,7 +62,5 @@ const PlayerDetailScreen = ({ route }) => {
     </ImageBackground>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default PlayerDetailScreen;

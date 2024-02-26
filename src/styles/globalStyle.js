@@ -188,7 +188,9 @@ export const CustomSearchBarStyle = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
-    color: 'white',
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 18,
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderColor: 'white',
