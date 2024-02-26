@@ -195,6 +195,7 @@ export const CustomSearchBarStyle = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     width: '80%',
+    backgroundColor: 'white',
   },
 });
 
